@@ -46,7 +46,7 @@ so the 0th and 2nd students are indirect friends. All of them are in the same fr
 
 给定一个方阵$M$，由于定于n个节点之间的联系： $M[i][j]$ = 1表示节点$i$和节点$j$之间是朋友关系，并且朋友关系是可传递，定义**朋友环（ friend circle）**为具有*直接*或*非直接*朋友关系所组成的节点。
 
-![shiyi](.\shiyi.png)
+![shiyi](shiyi.png)
 
 > 给定$M$,要求统计出，朋友环的数目。
 
@@ -73,7 +73,7 @@ so the 0th and 2nd students are indirect friends. All of them are in the same fr
 
 若发现$$\text{find}(i) \ne\text{find}(j)$$,此时就需要合并这两个集合，上述两种情况如下图所示。
 
-![shiyi](.\shiyi2.png)
+![shiyi](shiyi2.png)
 
 
 
@@ -189,7 +189,7 @@ parent[i] 代表节点i的父节点，注意：i代表节点，也是索引index
 
 ### 算法示意图
 
-![shiyi](.\shiyitu.png)
+![shiyi](shiyitu.png)
 
 上述程序的运行结果在leetcode上击败了74%的提交。
 
@@ -201,11 +201,11 @@ parent[i] 代表节点i的父节点，注意：i代表节点，也是索引index
 
 对于如下两个树的合并：
 
-![shiyi](.\part1.png)
+![shiyi](part1.png)
 
 存在如下两种合并方式：
 
-![shiyi](.\part2.png)
+![shiyi](part2.png)
 
 我们发现合并后，树（a）比树（b）的深度要深。事实上，我们更倾向于合并之后的树的深度较小，这样有利于快速查询根节点。
 
@@ -240,7 +240,7 @@ parent[i] 代表节点i的父节点，注意：i代表节点，也是索引index
 
 如果一个数的深度很深，则查询根节点就会比较耗时，例如下面这种情况:
 
-![shiyi](.\path.png)
+![shiyi](path.png)
 
 对于树（a），如果要查找E的根节点，则需要5次，而对于树（b），我们只需要2次，查询速度明显提高。
 
@@ -253,7 +253,7 @@ parent[i] 代表节点i的父节点，注意：i代表节点，也是索引index
 
 第一种：
 
-![shiyi](.\path2.png)
+![shiyi](path2.png)
 
 此种情况下，我们已经找到了E的根节点，因此，只要将从E到A的路径上，所有的点的父节点设置为A就可以了。
 
@@ -277,7 +277,7 @@ parent[i] 代表节点i的父节点，注意：i代表节点，也是索引index
 
 第二种：
 
-![shiyi](.\path3.png)
+![shiyi](path3.png)
 
 ```java
   public  int find(int i){
